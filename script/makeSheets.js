@@ -1,24 +1,26 @@
-const allSheet = {
-  title: '',
+let allSheet = {
+  title: "",
   sheets: [],
 };
 
-const createSheet = () => {
+
+ function createSheet () {
+ 
   const sheetDB = [];
-  for (let i = 0; i < rows; i += 1) {
+  for (let i = 0; i < rows; i++) {
     const row = [];
-    for (let j = 0; j < cols; j += 1) {
+    for (let j = 0; j < cols; j++) {
       const cell = {
-        bold: 'normal',
-        italic: 'normal',
-        underline: 'none',
-        fontSize: '16',
-        fontFamily: 'sans-serif',
-        color: '',
-        bColor: '',
-        align: 'left',
-        formula: '',
-        value: '',
+        bold: "normal",
+        italic: "normal",
+        underline: "none",
+        fontSize: "16",
+        fontFamily: "sans-serif",
+        color: "",
+        bColor: "",
+        align: "left",
+        formula: "",
+        value: "",
         children: [],
       };
       row.push(cell);
@@ -26,6 +28,7 @@ const createSheet = () => {
     sheetDB.push(row);
   }
   allSheet.sheets.push(sheetDB);
-}
+  
+};
 
 createSheet();
